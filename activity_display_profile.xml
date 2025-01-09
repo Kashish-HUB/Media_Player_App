@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/black_gradient"> <!-- Light background color for a clean and neutral look -->
+
+    <!-- Profile Picture in a CardView with Rounded Corners and Shadow -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person_placeholder"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Profile Name -->
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:textColor="#7F8C8D"
+    android:layout_marginBottom="8dp"
+    android:fontFamily="sans-serif-medium" />
+
+    <!-- User Email -->
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="16sp"
+        android:textColor="#7F8C8D"
+    android:layout_marginBottom="8dp"
+    android:fontFamily="sans-serif" />
+
+    <!-- User Phone -->
+    <TextView
+        android:id="@+id/tvUserPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="16sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- User Date of Birth -->
+    <TextView
+        android:id="@+id/tvUserDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOB"
+        android:textSize="16sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- User Gender -->
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="16sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/music_gradient_bg"
+    tools:context=".SongDetailActivity">
+
+    <!-- Song Title -->
+
+    <!-- Album Art with Circular Shape -->
+    <TextView
+        android:id="@+id/songTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Song Title"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/albumArtImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="Album Art"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_default_album_art"
+        app:layout_constraintTop_toBottomOf="@id/songTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CircularShape" />
+
+    <!-- Horizontal Buttons Container -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/albumArtImageView">
+
+        <!-- Play/Pause Button -->
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_prev"
+            android:contentDescription="Previous"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_play"
+            android:contentDescription="Play"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Previous Button -->
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_next"
+            android:contentDescription="Next"
+            android:background="@drawable/rounded_button"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Shuffle Button -->
+        <ImageButton
+            android:id="@+id/shuffleButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_shuffle"
+            android:contentDescription="Shuffle"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+
+    <!-- Current Time TextView -->
+    <TextView
+        android:id="@+id/currentTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center_vertical"/>
+
+    <!-- Total Time TextView -->
+    <TextView
+        android:id="@+id/totalTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:gravity="end|center_vertical"/>
+
+    <!-- SeekBar for Song -->
+    <SeekBar
+        android:id="@+id/songSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/currentTimeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

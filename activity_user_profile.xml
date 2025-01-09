@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/black_gradient">
+
+    <!-- Profile Picture Display -->
+    <ImageView
+        android:id="@+id/ivProfilePicture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_person_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_corner_background"
+        android:layout_marginTop="32dp" />
+
+    <!-- User Name Field -->
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:textColor="#333333"
+        android:textColorHint="#7F7F7F"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- User Email Field -->
+    <EditText
+        android:id="@+id/etUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:textColor="#333333"
+        android:textColorHint="#7F7F7F"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- User Phone Number -->
+    <EditText
+        android:id="@+id/etUserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:textColor="#333333"
+        android:textColorHint="#7F7F7F"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- User Date of Birth -->
+    <EditText
+        android:id="@+id/etUserDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your date of birth (dd/mm/yyyy)"
+        android:inputType="date"
+        android:textColor="#333333"
+        android:textColorHint="#7F7F7F"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Gender Selection -->
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/white"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="#6200EE" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/white"
+            android:layout_marginEnd="16dp"
+            android:buttonTint="#6200EE" />
+
+        <RadioButton
+            android:id="@+id/rbOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textColor="@color/white"
+            android:buttonTint="#6200EE" />
+    </RadioGroup>
+
+    <!-- Profile Picture Upload -->
+    <Button
+        android:id="@+id/btnUploadPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Profile Picture"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Profile"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp" />
+</LinearLayout>

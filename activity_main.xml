@@ -1,0 +1,178 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_gradient"
+        android:elevation="4dp"
+        android:padding="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- App Logo -->
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:contentDescription="App Logo"
+                android:layout_marginEnd="8dp" />
+
+            <!-- App Name -->
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MediaVault"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- User Account Icon -->
+
+            <ImageView
+                android:id="@+id/userAccountIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_user_account"
+                android:contentDescription="User Account"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="90dp"/> <!-- Adds space between the two ImageViews -->
+
+            <!-- Second ImageView with User Account Icon -->
+            <ImageView
+                android:id="@+id/userAccountIcon2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="User Account 2"
+                android:src="@drawable/ic_user_account2" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Song List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:background="@drawable/black_gradient"
+        />
+
+    <TextView
+        android:id="@+id/songTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/black"/>
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/black">
+
+        <ImageButton
+            android:id="@+id/shuffleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_shuffle"
+            android:contentDescription="Shuffle"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="8dp" />
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_prev"
+            android:contentDescription="Previous"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="8dp" />
+
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_play"
+            android:contentDescription="Play/Pause"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="8dp" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_next"
+            android:contentDescription="Next"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="8dp" />
+
+        <ImageButton
+            android:id="@+id/repeatButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_repeat"
+            android:contentDescription="Repeat"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- Time Display and Seek Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/black">
+
+        <!-- Current Time -->
+        <TextView
+            android:id="@+id/currentTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="14sp"
+            android:textColor="@android:color/white" />
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:progressTint="@color/seekbarColor"
+            android:thumbTint="@color/seekbarThumbColor" />
+
+        <!-- Total Time -->
+        <TextView
+            android:id="@+id/totalTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="14sp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

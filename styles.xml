@@ -1,0 +1,12 @@
+<resources>
+    <!-- Circular shape for ImageView -->
+    <style name="CircularShape">
+        <item name="shapeAppearanceOverlay">@style/CircularShapeAppearance</item>
+    </style>
+
+    <!-- Shape appearance to make the image circular -->
+    <style name="CircularShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
